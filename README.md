@@ -90,23 +90,23 @@ java-mongo-migrator/
             └──────────┬──────────────┘
                        │
         ┌──────────────▼─────────────────┐
-        │     LLM proposes Mongo schema  │
+        │     LLM Proposes Mongo Schema  │
         └──────────────┬─────────────────┘
                        │
         ┌──────────────▼─────────────────┐
-        │     Checks schema against code │
+        │     Checks Schema Against Code │
         └──────────────┬─────────────────┘
                        │ feedback loop if invalid
         ┌──────────────▼────────────────────┐
-        │        Revise and update schema   │
+        │        Revise and Update Schema   │
         └──────────────┬────────────────────┘
                        │
         ┌──────────────▼────────────────────┐
-        │    Generates migration plan       │
+        │    Generates Migration Plan       │
         └──────────────┬────────────────────┘
                        │
         ┌──────────────▼────────────────────┐
-        │    Validates LLM-generated plan   │
+        │    Validates LLM-Generated Plan   │
         └──────────────┬────────────────────┘
                        │ feedback loop if invalid
         ┌──────────────▼────────────────────┐
@@ -114,7 +114,7 @@ java-mongo-migrator/
         └──────────────┬────────────────────┘
                        │
         ┌──────────────▼────────────────────┐
-        │ Save results (schema & plan .md)  │
+        │ Save Results (Schema & Plan .md)  │
         └───────────────────────────────────┘
 ```
 
