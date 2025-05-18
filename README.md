@@ -12,7 +12,7 @@ This tool combines static code analysis with large language models (LLMs) to:
 
 ## 🧠 Use Case
 
-Given a legacy JBoss Java application — such as the [`kitchensink`](https://github.com/jboss-developer/jboss-eap-quickstarts/tree/8.0.x/kitchensink) quickstart — this tool can:
+Given a legacy [`JBoss Java application`](https://github.com/jboss-developer/jboss-eap-quickstarts) — such as the [`kitchensink`](https://github.com/jboss-developer/jboss-eap-quickstarts/tree/8.0.x/kitchensink) quickstart — this tool can:
 
 - Detect frameworks and technologies in use  
 - Recommend steps for modernization with Java 21 and MongoDB  
