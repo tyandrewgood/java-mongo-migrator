@@ -142,5 +142,5 @@ This approach mimics a **Corrective RAG** (Retrieval-Augmented Generation) patte
 
 ## 📁 Example Output
 
-- [Migration Plan for Kitchensink](results/kitchensink_migration_plan.md)  
-- [MongoDB Schema Suggestion for Kitchensink](results/kitchensink_schema_suggestion.md)
+- [Migration Plan for Kitchensink](results/kitchensink/kitchensink_migration_plan.md)  
+- [MongoDB Schema Suggestion for Kitchensink](results/kitchensink/kitchensink_schema_suggestion.md)
