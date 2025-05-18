@@ -77,7 +77,7 @@ java-mongo-migrator/
 └── README.md
 ```
 
-## 🔁 Processing Pipeline
+## 💡  Processing Pipeline
 
 ```
                 ┌──────────────────┐
