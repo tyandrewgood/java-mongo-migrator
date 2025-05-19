@@ -8,6 +8,9 @@ class SchemaValidator:
     REQUIRED_KEYWORDS = ["_id", "type", "fields", "relationships"]
 
     def __init__(self, llm_client):
+        """
+        Initialize with an LLM client for schema validation.
+        """
         self.llm_client = llm_client
 
     def validate_schema(self, schema_text: str, parsed_classes: List[Dict]) -> Dict[str, str]:

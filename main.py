@@ -17,6 +17,16 @@ logging.basicConfig(level=logging.INFO)
 
 
 def parse_java_source(path: str):
+    """
+    Recursively finds and parses Java files in the given path.
+
+    Args:
+        path: Root directory of Java source code.
+
+    Returns:
+        A list of parsed Java class dictionaries extracted from the source files.
+    """
+
     files = find_java_files(path)
     parser = JavaParser()
     parsed_classes = []
@@ -30,6 +40,21 @@ def parse_java_source(path: str):
 
 
 def full_migrate_command(path: str) -> None:
+    """
+    Executes the full migration pipeline from Java source to a MongoDB-compatible schema and migration plan.
+
+    Steps:
+        1. Parse Java source code.
+        2. Suggest MongoDB schema using LLM.
+        3. Validate and optionally revise the schema.
+        4. Generate a migration plan.
+        5. Validate and revise the plan up to MAX_RETRIES.
+        6. Save final schema and migration plan to disk.
+
+    Args:
+        path: Root directory containing the Java source code.
+    """
+
     logger.info(f"Starting full migration pipeline for path: {path}")
 
     files = find_java_files(path)
