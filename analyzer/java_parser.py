@@ -29,6 +29,19 @@ def safe_annotation_name(anno) -> Optional[str]:
 
 class JavaParser:
     def parse_java_file(self, file_path: str) -> List[Dict[str, Any]]:
+        """
+        Parses a Java source file and extracts high-level structural information for each top-level class.
+        
+        Returns a list of dictionaries where each dictionary contains:
+            - name: Name of the class
+            - annotations: List of annotation names (lowercased)
+            - fields: List of field definitions with type, name, annotations, and modifiers
+            - methods: List of method definitions with name, annotations, and modifiers
+            - type: Inferred classification(s) (e.g., Entity, Service, Repository)
+            - nested_types: List of nested class/interface/enum declarations with full structure
+
+        If parsing fails, returns a single-item list with an error message.
+        """
         parsed_classes = []
         try:
             with open(file_path, 'r', encoding='utf-8') as file:

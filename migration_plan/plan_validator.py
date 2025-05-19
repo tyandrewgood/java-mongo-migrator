@@ -28,6 +28,10 @@ class MigrationPlanValidator:
         return response.strip()
 
     def validate_plan(self, migration_plan: str, parsed_classes: List[Dict[str, Any]]) -> Dict[str, Any]:
+        """
+        Sends the migration plan and parsed Java class details to the LLM for validation.
+        Returns a structured report indicating whether the plan is complete and highlighting any issues.
+        """
         if not migration_plan:
             raise ValueError("Migration plan is empty.")
 

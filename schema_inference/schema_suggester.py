@@ -10,9 +10,15 @@ class SchemaSuggester:
     """
 
     def __init__(self, llm_client: LLMClient):
+        """
+        Initialize with an LLM client for generating schema suggestions.
+        """
         self.llm_client = llm_client
 
     def suggest_schema(self, parsed_classes: List[Dict[str, Any]]) -> str:
+        """
+        Generate a MongoDB schema suggestion from parsed Java classes.
+        """
         if not parsed_classes:
             raise ValueError("No parsed Java classes provided.")
 
